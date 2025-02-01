@@ -1,16 +1,17 @@
-pipeline { 
+pipeline {
     agent any
     
     tools {
-        maven 'maven3'
+        maven 'maven'
         jdk 'jdk17'
     }
 
     stages {
         
+        
         stage('Compile') {
             steps {
-            sh  "mvn compile"
+            sh "mvn compile"
             }
         }
         
